@@ -1,8 +1,8 @@
 'use strict';
 
 //------- PokeApi: Lista pokemon -------
-let limit = 40;
-let offset = 151;
+let limit = 60;
+let offset = 210;
 
 const statusEL = document.getElementById('status');
 const listEL = document.getElementById('pokemon-list');

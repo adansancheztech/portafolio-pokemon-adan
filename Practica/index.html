@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio pokemon</title>
+  </head>
+  <body class="bg-gray-950 text-gray-100 min-h-screen">
+    <div class="max-w-4xl mx-auto p-6">
+      <h1 class="text-3xl font-bold mb-2">Portafolio Pokémon</h1>
+
+      <p id="status" class="text-sm text-gray-400 mb-4"></p>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-3 mb-4">
+        <label class="text-sm text-gray-300">Mostrar:</label>
+        <select
+          id="limitSelect"
+          class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm"
+        >
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="60" selected>60</option>
+        </select>
+
+        <button
+          id="reloadBtn"
+          class="px-3 py-2 rounded-lg text-sm bg-gray-800 hover:bg-gray-700 transition"
+        >
+          Recargar
+        </button>
+      </div>
+
+      <!-- Collapsible -->
+      <div class="border border-gray-700 rounded-2xl overflow-hidden">
+        <button
+          id="collapseBtn"
+          class="w-full flex items-center justify-between px-4 py-3 bg-gray-900 hover:bg-gray-800 transition"
+        >
+          <div class="flex items-center gap-3">
+            <span
+              class="text-xs font-semibold px-2 py-1 rounded-full bg-gray-800 border border-gray-700"
+            >
+              #NAT
+            </span>
+            <span class="text-sm text-gray-300">Lista de Pokémon</span>
+          </div>
+
+          <span id="collapseIcon" class="text-gray-400">▾</span>
+        </button>
+
+        <div id="collapsePanel" class="hidden bg-gray-950">
+          <div
+            class="grid grid-cols-[80px_80px_1fr_1fr] gap-2 px-4 py-2 text-xs text-gray-400 border-b border-gray-800"
+          >
+            <div>Nº</div>
+            <div>Imagen</div>
+            <div>Nombre</div>
+            <div>Comentario</div>
+          </div>
+
+          <ul id="pokemon-list" class="divide-y divide-gray-900"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./javascript/pokemon-list.js"></script>
+  </body>
+</html>
